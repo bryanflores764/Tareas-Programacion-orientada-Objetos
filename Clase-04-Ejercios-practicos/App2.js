@@ -26,7 +26,8 @@ class Grados {
     }
 
     convercionDeGrados(){
-        if(this.temperatura =='fahrenheit' && this.convercion=='celsius'){
+        if(this.convercion.length >0&&this.temperatura.length>0){
+            if(this.temperatura =='fahrenheit' && this.convercion=='celsius'){
                 if(Number.isFinite(this.grados)){
                     if(this.grados>=0||this.grados<=-1){
                     let GradosConvertidos = (this.grados -32)*5/9
@@ -76,15 +77,19 @@ class Grados {
                     console.log('El dato de grados debe ser numerico no cadena vacia ni cadena de texto')
                 }
         }else{
-            console.log('Eror en los nombres de las temperatura ah convertir recordar que este programa solo hace converciones de:')
+            console.log('Error en los nombres de las temperatura ah convertir recordar que este programa solo hace converciones de:')
             console.log('• Fahrenheit - Celsius. y • Celsius - Fahrenheit. y • Kelvin - Fahrenheit.• Kelvin - Celsius.')
-            console.log('y los nombre de temperatura no deben ser cadena vacia')
-            console.log('y no debe de haver espacios entre las palabras')
+            console.log('y no debe de haver espacios entre las palabras y escribirlas bien')
         }
+                    
+        }else{
+            console.log(`los datos no deben ser cadena vacia`)
+        }
+      
     }
 }
 
-let convercion1 = new Grados('fahrenheit','celsius','30') // en el primer atributo van los grados ah convertir 
+let convercion1 = new Grados('Kelvin','fahrenheit','-70') // en el primer atributo van los grados ah convertir 
 convercion1.convercionDeGrados()//en el segundo atributo va el nombre de los grados que quiere se conviertan
                                 //y en el tercer atributo van el numero de grados
 

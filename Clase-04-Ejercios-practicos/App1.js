@@ -23,23 +23,20 @@ class IMC {
   }
 
   indiceDeMasaMuscular() {
+
     if (Number.isFinite(this.peso) && Number.isFinite(this.altura)) {
-      if (this.peso != " " && this.altura != " ") {
-        if (this.altura > 0 && this.peso > 0) {
-          let IMC = this.peso / (this.altura * this.altura);
-          console.log(`Su IMC ${this._Nombre} es de:${IMC.toFixed(2)}`);
-        } else {
-          console.log(`La altura y el peso tiene que ser mayor ah 0`);
-        }
+      if (this.altura > 0 && this.peso > 0) {
+        let IMC = this.peso / (this.altura * this.altura);
+        console.log(`Su IMC ${this._Nombre} es de:${IMC.toFixed(2)}`);
       } else {
-        console.log(`Los datos no tiene que ser cadena bacia y tampoco 0`);
+        console.log(`La altura y el peso tiene que ser mayor ah 0`);
       }
     } else {
-      console.log(" Los datos tienen que ser numericos no palabras");
+      console.log(`Los datos tienen que ser numericos no cadena vacia ni texto`);
     }
   }
 }
 
-let Usuario1 = new IMC("Bryan", "hola", "70"); // la altura debe ser en metros la debe escribir con un punto
+let Usuario1 = new IMC("Bryan","1.70", "100"); // la altura debe ser en metros la debe escribir con un punto
 
 Usuario1.indiceDeMasaMuscular();
