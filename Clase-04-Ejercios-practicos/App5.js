@@ -40,7 +40,7 @@ class Apuesta{
             if(Number.isFinite(this.numero)&&Number.isFinite(this.cantidad)){
                 if(this.numero===numeroAleatorio){
                     let premio = this.cantidad*20
-                    console.log(`Felizidades ${this.nombre} adivinaste el numero la cantidad que apostate que ${this.cantidad}`)
+                    console.log(`Felizidades ${this.nombre} adivinaste el numero la cantidad que apostate fue ${this.cantidad}`)
                     console.log(`Tu premio es la cantidad que apostaste multiplicada por 20 tu premio es de ${premio.toFixed(2)}`)
                 }else{
                     console.log(`Locentimos no adivinaste el numero el numero era ${numeroAleatorio}`)
@@ -59,6 +59,6 @@ class Apuesta{
     }
 }
 
-let participante1 = new Apuesta('bryan','20 ',' 40')
+let participante1 = new Apuesta('bryan','20 ','50' )//para que salga mas facil encontrar el numero aleatorio solo ponga numeroAleatorio esa variable dentro del atributo de numero
 
 participante1.Apuesta()

@@ -37,6 +37,6 @@ class IMC {
   }
 }
 
-let Usuario1 = new IMC("Bryan","1.70", "100"); // la altura debe ser en metros la debe escribir con un punto
+let Usuario1 = new IMC("bryan","1.70", "100"); // la altura debe ser en metros la debe escribir con un punto
 
 Usuario1.indiceDeMasaMuscular();
