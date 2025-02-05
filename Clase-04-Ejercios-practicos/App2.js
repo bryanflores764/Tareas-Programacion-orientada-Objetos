@@ -15,18 +15,17 @@ class Grados {
     }
 
     get temperatura(){
-        return this._Temperatura.toLowerCase()
+        return this._Temperatura.toLowerCase().trim().split(/\s+/)
     }
 
     get convercion (){
-        return this._Convercion.toLowerCase()
+        return this._Convercion.toLowerCase().trim().split(/\s+/)
     }
     get grados(){
         return parseFloat( this._Grados)
     }
 
     convercionDeGrados(){
-        if(this.convercion.length >0&&this.temperatura.length>0){
             if(this.temperatura =='fahrenheit' && this.convercion=='celsius'){
                 if(Number.isFinite(this.grados)){
                     if(this.grados>=0||this.grados<=-1){
@@ -64,7 +63,7 @@ class Grados {
             }else{
                 console.log('El dato de grados debe ser numerico no cadena vacia ni cadena de texto')
                 
-            }else if(this.temperatura =='kelvin' && this.convercion=='celcius' ){
+            }else if(this.temperatura =='kelvin' && this.convercion=='celsius' ){
                 if(Number.isFinite(this.grados)){
                     if(this.grados>=0||this.grados<=-1){
                     let GradosConvertidos = (this.grados -273.15)
@@ -79,21 +78,13 @@ class Grados {
         }else{
             console.log('Error en los nombres de las temperatura ah convertir recordar que este programa solo hace converciones de:')
             console.log('• Fahrenheit - Celsius. y • Celsius - Fahrenheit. y • Kelvin - Fahrenheit.• Kelvin - Celsius.')
-            console.log('y no debe de haver espacios entre las palabras y escribirlas bien')
+            console.log('Y los datos enviados no deben ser cadena vacia')
         }
-                    
-        }else{
-            console.log(`los datos no deben ser cadena vacia`)
-        }
+                
       
     }
 }
 
-let convercion1 = new Grados('Kelvin','fahrenheit','-70') // en el primer atributo van los grados ah convertir 
+let convercion1 = new Grados('kelvin','fahrenheit','0') // en el primer atributo van los grados ah convertir 
 convercion1.convercionDeGrados()//en el segundo atributo va el nombre de los grados que quiere se conviertan
                                 //y en el tercer atributo van el numero de grados
-
-// • Fahrenheit – Celsius.
-// • Celsius – Fahrenheit.
-// • Kelvin – Fahrenheit.
-// • Kelvin – Celsius.
