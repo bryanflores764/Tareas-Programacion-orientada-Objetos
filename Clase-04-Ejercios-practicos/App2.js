@@ -30,8 +30,8 @@ class Grados {
                 if(Number.isFinite(this.grados)){
                     if(this.grados>=0||this.grados<=-1){
                     let GradosConvertidos = (this.grados -32)*5/9
-                    console.log(`Sus grados ${this.temperatura} ah convertir son:${this.grados}`)
-                    console.log(`Sus grados ${this.temperatura} ah ${this.convercion}  son:${GradosConvertidos.toFixed(2)}`)
+                    console.log(`Sus grados ${this.temperatura}(°F) ah convertir son:${this.grados}`)
+                    console.log(`Sus grados ${this.temperatura}(°F) ah ${this.convercion}(°C) son:${GradosConvertidos.toFixed(2)}`)
                     }else {
                         console.error('error')
                     }
@@ -42,8 +42,8 @@ class Grados {
                 if(Number.isFinite(this.grados)){
                     if(this.grados>=0||this.grados<=-1){
                     let GradosConvertidos = (this.grados *9/5)+32
-                    console.log(`Sus grados ${this.temperatura} ah convertir son:${this.grados}`)
-                    console.log(`Sus grados ${this.temperatura} ah ${this.convercion} son:${GradosConvertidos.toFixed(2)}`)
+                    console.log(`Sus grados ${this.temperatura}(°C) ah convertir son:${this.grados}`)
+                    console.log(`Sus grados ${this.temperatura}(°C)  ah ${this.convercion}(°F) son:${GradosConvertidos.toFixed(2)}`)
                     }else {
                         console.error('eror')
                     }
@@ -56,7 +56,7 @@ class Grados {
                 if(this.grados>=0||this.grados<=-1){
                 let GradosConvertidos = (this.grados -273.15)*9/5+32
                 console.log(`Sus grados ${this.temperatura} ah convertir son:${this.grados}`)
-                console.log(`Sus grados ${this.temperatura} ah ${this.convercion} son:${GradosConvertidos.toFixed(2)}`)
+                console.log(`Sus grados ${this.temperatura} ah ${this.convercion}(°F) son:${GradosConvertidos.toFixed(2)}`)
                 }else{
                     console.error('error')
                 }
@@ -68,7 +68,7 @@ class Grados {
                     if(this.grados>=0||this.grados<=-1){
                     let GradosConvertidos = (this.grados -273.15)
                     console.log(`Sus grados ${this.temperatura} ah convertir son:${this.grados}`)
-                    console.log(`Sus grados ${this.temperatura} ah ${this.convercion} son:${GradosConvertidos.toFixed(2)}`)
+                    console.log(`Sus grados ${this.temperatura} ah ${this.convercion}(°C) son:${GradosConvertidos.toFixed(2)}`)
                     }else{
                         console.error('error')
                     }
@@ -85,6 +85,6 @@ class Grados {
     }
 }
 
-let convercion1 = new Grados('kelvin','fahrenheit','0') // en el primer atributo van los grados ah convertir 
+let convercion1 = new Grados('kelvin','fahrenheit','69') // en el primer atributo van los grados ah convertir 
 convercion1.convercionDeGrados()//en el segundo atributo va el nombre de los grados que quiere se conviertan
                                 //y en el tercer atributo van el numero de grados
