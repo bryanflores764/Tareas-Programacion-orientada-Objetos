@@ -32,7 +32,8 @@ class Persona {
   }
 
   set nombreNuevo(nuevoNombre) {
-    if (nuevoNombre.length <= 20) {
+      let nombreV =nuevoNombre.split(' ').join('')
+    if (nombreV.length <= 20) {
       this._Nombre = nuevoNombre;
       console.log(`Nuevo nombre agregado ${this.nombre}`)
     } else {
@@ -85,7 +86,8 @@ class Persona {
   }
 
   mostrarInfo() {
-    if (this.nombre.length <= 20) {
+       let nombreV = this.nombre.split(' ').join('')
+    if (nombreV.length <= 20) {
       if (this.telefono.toString().length == 8) {
         if (this.genero == `F` || this.genero == `M`) {
           if (
@@ -111,16 +113,16 @@ class Persona {
         console.log(`El numero de debe ser igual ah 8 numeros`);
       }
     } else {
-      console.log(`La longitud no debe pasar los 20 caracteres`);
+      console.log(`La longitud nombre no debe pasar los 20 caracteres`);
     }
   }
 }
 
-let Persona2 = new Persona(`bryan ronaldo flores`,74846044, `m`, `rrhh`); // el Id se da ya al crear el objeto pero si usted quiere lo puede modificar
+let Persona2 = new Persona(`bryan ronaldo flores hl`,74846044, `m`, `rrhh`); // el Id se da ya al crear el objeto pero si usted quiere lo puede modificar
 
 Persona2.mostrarInfo()
 Persona2.id=3
-Persona2.nombreNuevo =`bryan julian`
+Persona2.nombreNuevo =`bryan julian ronaldoff`
 Persona2.departamentoNuevo=`ventas`
 Persona2.telefonoNuevo=74846043
 Persona2.generoNuevo=`f`
